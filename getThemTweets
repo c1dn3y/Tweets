@@ -1,0 +1,29 @@
+##load rtweet package
+library(rtweet)
+
+##create token and save it as an environment variable
+create_token(
+  app = "TweetsByZip",
+  consumer_key = "CUSTOMER KEY",
+  consumer_secret = "CUSTOMER SECRET",
+  access_token = "ACCESS TOKEN",
+  access_secret = "ACCESS SECRET")
+  
+## search 15,000 tweets containing keyword within given radius of latitude and longitude within specified date range
+tweets <- search_tweets(q = "police", tz = "CST", geocode = "latitude, longitude, radius", n = 15000, include_rts = FALSE, since="since date", until="until date" 
+)
+
+ ## save tweets to csv
+save_as_csv(tweets, file_name = "CITYTweets", prepend_ids = TRUE, na = "", fileEncoding = "UTF-8"
+)
+
+##us function below to stay within twitters twitter searches per minute rule
+# NOT RUN {
+testit <- function(x)
+{
+  p1 <- proc.time()
+  Sys.sleep(x)
+  proc.time() - p1 # The cpu usage should be negligible
+}
+testit(900)
+# }
