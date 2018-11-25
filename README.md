@@ -1,7 +1,7 @@
 # Tweets
 Using R to: pull tweets from twitter, conduct sentiment analysis, create graphs of sentiment and total tweets, and wordcloud of tweets containing to keyword "police".
 
-This project serves a few purposes: 1) it will be submitted as part of my term paper for a graduate forensics course, 2) it allowed me to learn R, 3) it gave me a better understanding of sentiment analysis in R.
+This project serves a few purposes: 1) it will be submitted as part of my term paper for a graduate forensics course, 2) it allowed me to learn R, and 3) it gave me a better understanding of sentiment analysis in R.
 
 Credit must be given to Wayne Weiai Xu(2016) and Julie Sigle (2015) whose work greatly assisted in the creation of this project.
 
